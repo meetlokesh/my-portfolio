@@ -3,12 +3,22 @@
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+  .resume-box{
+    .resume-page-img{
+    width: 42vw;
+    }
+  }
 }
 
 // Desktops & Laptops
 @include mediaLg {
   .projects {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .resume-box{
+    .resume-page-img{
+    width: 42vw;
+    }
   }
 }
 
@@ -66,6 +76,13 @@
   .projects {
     grid-template-columns: repeat(2, 1fr);
   }
+  .resume-box{
+    display: flex;
+    flex-direction: column;
+    .resume-page-img{
+      width: 80vw;
+    }
+  }
 }
 
 // Smartphones
@@ -84,5 +101,13 @@
 
   .projects {
     grid-template-columns: 1fr;
+  }
+  .download-btn{
+    background-color: #17143d;
+  }
+  .resume-box{
+    .resume-page-img{
+    width: 90vw;
+    }
   }
 }

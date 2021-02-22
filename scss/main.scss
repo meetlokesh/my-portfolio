@@ -130,7 +130,25 @@ main {
     }
   }
 }
-
+.download-btn{
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 100px;
+  cursor: pointer;
+  @include easeOut;
+}
+// Resume 
+.resume {
+  .resume-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .resume-page{
+      margin: auto;
+    }
+  }
+}
 // Contact Page
 .boxes {
   display: flex;

@@ -160,7 +160,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
@@ -192,6 +192,21 @@ main {
       opacity: 0.5;
       border-color: #f4d27b;
       transition: all 0.5s ease-out; }
+
+.download-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 100px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+
+.resume .resume-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .resume .resume-box .resume-page {
+    margin: auto; }
 
 .boxes {
   display: flex;
@@ -238,11 +253,15 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .resume-box .resume-page-img {
+    width: 42vw; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .resume-box .resume-page-img {
+    width: 42vw; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -271,10 +290,15 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .resume-box {
+    display: flex;
+    flex-direction: column; }
+    .resume-box .resume-page-img {
+      width: 80vw; } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -285,4 +309,8 @@ main {
       margin-top: 1rem;
       font-size: 5rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .download-btn {
+    background-color: #17143d; }
+  .resume-box .resume-page-img {
+    width: 90vw; } }
